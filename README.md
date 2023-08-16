@@ -12,5 +12,3 @@ ter habilidades nos meus conhecimentos
 
  ser uma boa programadora e saber exercer todos os meus conhecimnentos 
  passar meus conhecimentos para outras pessoas 
- 
-
