@@ -42,28 +42,28 @@ nav a:hover {
     text-decoration: solid;
 }
 
-.button {
+.button-gl {
     text-align: center;
     white-space: normal;
 }
 
-.nav-items {
+.nav-items-gl {
     padding: 8px 16px;
     width: auto;
     border: none;
     /* outline: 0; */
 }
 
-.card {
+.card-gl {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
         0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.to-right {
+.to-right-gl {
     float: right !important;
 }
 
-.to-left {
+.to-left-gl {
     float: left !important;
 }
 
@@ -72,14 +72,14 @@ nav a:hover {
     padding: 12px 24px !important;
 }
 
-.content {
+.content-gl {
     margin-left: auto;
     margin-right: auto;
     max-width: 2000px;
     margin-top: 46px
 }
 
-.container {
+.container-gl {
     padding: 0.01em 16px;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,7 @@ nav a:hover {
     padding-bottom: 64px !important
 }
 
-.wide {
+.wide-gl {
     letter-spacing: 4px;
 }
 
@@ -109,15 +109,15 @@ h2 {
     font-size: 30px;
 }
 
-.opacity{
+.opacity-gl{
     opacity: 0.60;
 }
 
-.justify{
+.justify-gl{
     text-align: justify;
 }
 
-.center {
+.center-gl {
     text-align: center;
 }
 
@@ -131,7 +131,7 @@ section{
     box-sizing: inherit;
   }
 
- section p.justify{
+ section p.justify-gl{
     width: auto;
     margin: auto;
     padding: 10px 100px 10px 100px;
@@ -157,7 +157,7 @@ section{
     font-size: 10px;
   }
 
-  .cardBox {
+  .cardBox-gl {
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -172,7 +172,7 @@ section{
 }
 
 
-  .btn-card {
+  .btn-card-gl {
     background-color: black;
     color: #fff;
     padding: 8px 16px;
@@ -183,17 +183,17 @@ section{
     text-decoration: none;
   }
 
-  .black-ground .cardBox{
+  .black-ground .cardBox-gl{
     background-color: white;
     color: black;
   }
 
-  .btn-card:hover {
+  .btn-card-gl:hover {
     background-color: inherit;
     color: inherit;
   }
 
-  .card-container {
+  .card-container-gl {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -208,7 +208,7 @@ section{
 
 
 
-  .aling-art{
+  .aling-art-gl{
     margin: 55px;
     padding: 55px;
 }
@@ -225,13 +225,13 @@ align-content: center;
 font-size: 45px;
 }
 
-.edp{
+.edp-gl{
     font-size: 25px;
     margin-left: 15%;
     margin-right: 15%;
 }
 
-.txt{
+.txt-gl{
   
     text-align: justify;
     padding: auto;
@@ -240,12 +240,12 @@ font-size: 45px;
     float: left;
 }
 
-.aling{
+.aling-gl{
     text-align: center;
     padding: 25px;
 }
 
-.mec {
+.mec-gl {
     width: 500px;
     height: 500px;
     text-align:right;
@@ -256,25 +256,25 @@ font-size: 45px;
     border-radius: 55px;
 }
 
-.txt2{
+.txt2-gl{
     font-size: 35px;
 }
 
-.txt1{
+.txt1-gl{
     font-size: 25px;
     display: flex;
     max-width: 100%;
     
 }
 
-.stl{
+.stl-gl{
     background-color: white;
     border-radius: 25px;
   display: flex;
 padding-left: 25px;
 padding-top: 15px;
 }
-.stl p{
+.stl-gl p{
     
    margin: 25px;
    padding: 25px;
@@ -284,13 +284,13 @@ padding-top: 15px;
     font-size: 35px;
 }
 
-.bodyart{
+.bodyart-gl{
     background-color:  #ffca91; 
     color: rgb(0, 0, 0);
     margin: 0px;
 }
 
-.h1art{
+.h1art-gl{
     text-align:center ;
     padding-top: 25px;
 }
@@ -301,7 +301,39 @@ img{
   
 }
 
+footer.content-gl {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 2000px;
+    margin-top: 0px;
+}
 
+section.cardBox-gl {
+    background-color: white;
+    color: black;
+}
+
+#carousel-teste .container-gl {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#carousel-teste .container-fluid-gl {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+}
+
+#carousel-test.container-gl {
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
