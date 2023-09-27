@@ -1,0 +1,83 @@
+body {
+    background-color: gainsboro;
+}
+
+.content-group-gl {
+    margin-top: 100px;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.content-group-gl .left-side-bar-gl
+{
+    margin-top: 60px;
+}
+
+
+.left-side-bar-gl {
+    flex: 1;
+    float: left; 
+    background-color: white;
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.left-side-bar-gl button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: inherit;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.left-side-bar-gl button:hover {
+    background-color: rgb(194, 194, 194);
+    color: rgb(3, 1, 1);
+}
+
+.left-side-bar-gl button.active {
+    background-color: rgb(194, 194, 194);
+    color: rgb(3, 1, 1);
+}
+
+.flex-center-gl {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles-gl {
+    flex: 1;
+    margin: 50px 40px 0px 0px;
+    width: auto;
+    height: auto;
+}
+
+section.cardBox-gl {
+    color: black;
+    background-color: white; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 50px;
+    padding: 0px 12px;
+    height: fit-content;
+    width: 1000px;
+    max-width: 1000px;
+    max-height: fit-content;
+
+}
+
+.card-gl {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+        0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
