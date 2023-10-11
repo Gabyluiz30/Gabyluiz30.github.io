@@ -1,54 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
 
-    <label for="idade">digite sua idade</label>
-     <input type="text" id="idade">
-
-     <button onclick="verificaridade()">salvar</button>
-     <p id="result"></p>
+  <!-- 1) Verifique a idade: peça ao usuário para inserir a sua idade e verifique se ele é menor de idade, adulto ou idoso. -->
 
 
+  <label for="idade">Digite sua idade</label>
+  <input type="text" id="idade">
 
-    </script>
+  <button onclick="verificarIdade()"> Verificar Idade</button>
+  <p id="result"></p>
 
-   
-    
-   <script>
-    function verificaridade(){
-      let   
+
+
+  <script>
+
+    function verificarIdade() {
+      let idade = document.getElementById('idade').value;
+      let resultado = document.getElementById('result');
+
+      if (idade < 18) {
+        resultado.innerText = idade + " é menor de idade";
+      } else if (idade >= 18 && idade < 60) {
+        resultado.innerText = idade + " é adulto";
+      } else if (idade >= 60) {
+        resultado.innerText = idade + " é idoso";
+      }
     }
-   </script> 
-    
-
-     
-     
 
 
- 
-        
-
-    
+  </script>
 
 
-    
-    
-   
+  <!-- 2) Compare números: peça ao usuário para inserir dois números e diga qual deles é maior, ou se são iguais. -->
 
 
-    
+  <input type="text" id="valorX">
+  <input type="text" id="valorY">
 
-  
+  <BUtton onclick="verificarValor()">verificar Valor </BUtton>
+  <p id="resultVeriricarValor"></p>
 
- 
- 
 
- 
- 
+  <script>
+
+    function verificarValor() {
+      let valorX = document.getElementById('valorX').value;
+      let valorY = document.getElementById('valorY').value;
+
+
+      if (valorX > valorY) {
+        resultVeriricarValor.innerText = valorX + "maior que " + valorY;
+      } else if (valorx < valory) {
+        resultVeriricarValor.innerText = valorX + "menor que  " + valorY;
+      } else if (valorx > valory) {
+        rresultVeriricarValor.innerText = valorX + "e " + valorY;
+      }
+    }
+
+  </script>
+
+  <!-- 3) Verifique se há divisibilidade: peça ao usuário para inserir dois números e verifique se o primeiro número é divisível pelo segundo. -->
+
+  <input type="text" id="valorA">
+  <input type="text" id="valorB">
+  <BUtton onclick="verificarDivisivel()">E Divisivel? </BUtton>
+  <p id="resultEhDivisivel"></p>
+
+
+  <script>
+
+    function verificarDivisivel() {
+      let valorA = document.getElementById('valorA').value;
+      let valorB = document.getElementById('valorB').value;
+
+      if (valorA % valorB == 0) {
+        resultEhDivisivel.innerText = valorA + "é divisível por " + valorB + "e o resultado é " + (valorA / valorB)
+      } else {
+        resultEhDivisivel.innerText = valorA + "nao e divisível por " + valorB;
+      }
+
+    }
+  </script>
+
+  <!-- 4)Verificação de temperatura: peça o usuário para inserir uma temperatura e verifique se está frio, agradável ou quente. -->
+
+  <input type="text" id="temperatura">
+  <BUtton onclick="verificartemperatura()">vertemperatura"</BUtton>
+  <p id="resultemperatura"></p>
+
+  <script>
+    function verificartemperatura() {
+      let temperatura = document.getElementById("temperatura").value;
+      console.log(temperatura);
+      if (temperatura <= 20 && temperatura >= 15) {
+        document.getElementById("resulttemperatura").imertext = temperatura + "°c significa frio";
+      } else if (temperatura < 20 && temperatura <= 25) {
+
+        document.getElementById("resulttemperatura").imertext = temperatura + "°c e uma temperatura ideal";
+      } else if (temperatura < 25 && temperatura <= 32) {
+        document.getElementById("resultTemperatura").imertext = temperatura + "°c significa calor ";
+      } else if (temperatura > 32) {
+        document.getElementById("resultTemperatura").imertext = temperatura + "°c e extremamente quente";
+      } else if (temperatura < 15) {
+        document.getElementById("resultTemperatura").innerText = temperatura + "°c e extremamente frio ";
+
+      }
+
+    }
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 <html>
