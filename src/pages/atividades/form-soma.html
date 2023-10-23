@@ -45,7 +45,7 @@
   <input type="text" id="valorX">
   <input type="text" id="valorY">
 
-  <BUtton onclick="verificarValor()">verificar Valor </BUtton>
+  <button onclick="verificarValor()">verificar Valor </button>
   <p id="resultVeriricarValor"></p>
 
 
@@ -58,13 +58,13 @@
 
       if (valorX > valorY) {
         resultVeriricarValor.innerText = valorX + "maior que " + valorY;
-      } else if (valorx < valory) {
-        resultVeriricarValor.innerText = valorX + "menor que  " + valorY;
-      } else if (valorx > valory) {
-        rresultVeriricarValor.innerText = valorX + "e " + valorY;
+      } else if (valorX < valorY) {
+        resultVeriricarValor.innerText = valorX + "menor que " + valorY;
+      } else if (valorX == valorY) {
+        rresultVeriricarValor.innerText = valorX + "e " + valorY + " são iguais!";
       }
     }
-    
+
 
   </script>
 
@@ -72,7 +72,7 @@
 
   <input type="text" id="valorA">
   <input type="text" id="valorB">
-  <BUtton onclick="verificarDivisivel()">E Divisivel? </BUtton>
+  <button onclick="verificarDivisivel()">É Divisivel? </button>
   <p id="resultEhDivisivel"></p>
 
 
@@ -94,58 +94,98 @@
   <!-- 4)Verificação de temperatura: peça o usuário para inserir uma temperatura e verifique se está frio, agradável ou quente. -->
 
   <input type="text" id="temperatura">
-  <BUtton onclick="verificartemperatura()">vertemperatura"</BUtton>
+  <button onclick="verificartemperatura()">Checar temperatura</button>
   <p id="resultemperatura"></p>
 
   <script>
     function verificartemperatura() {
-      let temperatura = document.getElementById("temperatura").value;
-      console.log(temperatura);
-      if (temperatura <= 20 && temperatura >= 15) {
-        document.getElementById("resulttemperatura").imertext = temperatura + "°c significa frio";
-      } else if (temperatura < 20 && temperatura <= 25) {
+      let temperatura = parseFloat(document.getElementById("temperatura").value);
 
-        document.getElementById("resulttemperatura").imertext = temperatura + "°c e uma temperatura ideal";
-      } else if (temperatura < 25 && temperatura <= 32) {
-        document.getElementById("resultTemperatura").imertext = temperatura + "°c significa calor ";
-      } else if (temperatura > 32) {
-        document.getElementById("resultTemperatura").imertext = temperatura + "°c e extremamente quente";
-      } else if (temperatura < 15) {
-        document.getElementById("resultTemperatura").innerText = temperatura + "°c e extremamente frio ";
-
+      if (temperatura <= 16) {
+        resultemperatura.imertext = temperatura + "°c está frio";
+      } else if (temperatura >= 17 && temperatura <= 28) {
+        resultemperatura.imertext = temperatura + "°c e uma temperatura ideal";
+      } else if (temperatura > 28) {
+        resultemperatura.imertext = temperatura + "°c está quente ";
       }
-
     }
 
   </script>
 
   <!-- 5) Verificação de notas: peça ao usuário para inserir todas as notas no ano em cada matéria e, por fim, mostre se ele foi aprovado ou reprovado.
-  Pelo menos 3 matérias
-  Pelo menos 3 etapa
-  Exibir se aprovado ou reprovado com o resultado da média final em cada matéria  -->
+Pelo menos 3 matérias
+Pelo menos 3 etapa
+Exibir se aprovado ou reprovado com o resultado da média final em cada matéria -->
 
-  <input type="text" id="notas">
-  <BUtton onclick="verificarNotas()">vernotas"</BUtton>
-  <p id="resulnotas "></p>
+  <h3>Notas de matemática:</h3>
+  <input type="number" id="nota_mat_1">
+  <input type="number" id="nota_mat_2">
+  <input type="number" id="nota_mat_3">
+  <input type="number" id="nota_mat_4">
+  <p id="result_matematica"></p>
+  <button onclick="verificarNotas()">Verificar notas</button>
 
   <script>
     function verificarNotas() {
+      let valorTotalMatematica = parseFloat(nota_mat_1.value) + parseFloat(nota_mat_2.value) + parseFloat(nota_mat_3.value) + parseFloat(nota_mat_4.value);
+      console.log(valorTotalMatematica)
+      if (valorTotalMatematica >= 60) {
+        result_matematica.innerText = "Foi aprovado em Matemática";
+      } else {
+        result_matematica.innerText = "Foi reprovado em Matemática";
+      }
 
-      let P1 = document.getElementById("n1.1").value;
-      let P2 = document.getElementById("n1.2").value;
-      let n1 = document.getElementById("n1.3").value;
-      let n2 = document.getElementById("n1.1").value;
-      let n3 = document.getElementById("n1.2").value;
-      let n4 = document.getElementById("n2.3").value;
     }
-   
-      
+  </script>
 
- 
-
-       
+  <!-- 6 //Cálculo do fatorial de um número: peça ao usuário para inserir um número e calcule o fatorial desse número e mostre o processo do fatorial realizado; -->
 
 
+  <div class="row">
+    <div class="col-4">
+      <h4>
+
+      </h4>
+      <label for="numberForFat">Fatorial de :</label>
+      <input type="text" id="numberForFat">
+      <button onclick="calcularFatorial()">Fatorar</button>
+
+      <p id="resultFatorial"></p>
+    </div>
+  </div>
+
+  <script>
+
+    function calcularFatorial(){
+      resultfatorial.innertext = fatorialbystep(parseInt(numberfortfat.value));
+
+    }
+    function fatorial(value) {
+      if(value <= 0)
+      return 1;
+    else if (value > 0 && value <= 2)
+       return value;
+      return value * fatorial(value - 1);
+
+      }
+      function fatorialbystep(value) {
+        let fat = value;
+        let c = 1;
+        let step = ' O fatorial  de ${value} ! é: ${fatorial(value)} \n';
+        while ( c < value) {
+          step += '${value }! = ${fat} X ${(value - c)}'
+          fat = fat * (value - c);
+          step += ' = ${fat} \n'
+          c++;
+
+        }
+        return step;
+      }
+
+
+
+
+  </script>
 
 
 
@@ -174,9 +214,6 @@
 
 
 
+</body>
 
-
-
-
-
-
+</html>
