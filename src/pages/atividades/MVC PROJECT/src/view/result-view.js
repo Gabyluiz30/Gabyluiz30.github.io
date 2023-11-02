@@ -29,8 +29,8 @@ const resultView = {
         <th scope="row">#${i+1}</th>            
         <td class="text-success"><strong>${params[i].getNome()}</strong></td>            
         <td><strong>${params[i].getIdade()}</strong></td>            
-        <td class="text-primary fst-italic><strong>${params[i].getLogin()}</strong></th>            
-        <td><input value="${params[i].getSenha()}" disabled type="passord"></th>            
+        <td class="text-primary fst-italic"><strong>${params[i].getLogin()}</strong></td>            
+        <td><input value="${params[i].getSenha()}" disabled type="password"></td>            
       `
       tRBody.appendChild(newLine)
     }
